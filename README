@@ -2,7 +2,7 @@
 
 - Julia 1.5.3
 - Julia packages : CUDA, LinearAlgebra, SpecialFunctions
-- NOTE : GPU architechure is at least Pascal or later. (Volta, Turing)
+- NOTE : GPU architechure is at least Pascal or later. (Volta, Turing, ...)
 
 2. How to run
 
@@ -12,3 +12,14 @@ calculate the log of partition function per site with function partition(pars).
 - In loop_tnr.jl, maximum iteration and cut-off in the singular value spectrum, etc. can be modified.
 
 - Run 'julia main.jl' to run the code.
+
+3. What you need to do with other models:
+
+(1) Define a local tensor of your demand: 
+  In this code, the local tensor is made with defined functions. (i.e. initial_tensor_XY, initial_tensor_ising)
+  So, you may need to make your customized function.
+
+(2) Modify main.jl
+  main.jl is edited for only one purpose: finding the leading Lee-Yang zeros. 
+  If you want to extract the partition function of a given parameter, you can use a function partition. 
+  Or, you can use subfunctions in "loop_tnr.jl" to extract the tensors in each stage of Loop-TNR. 
