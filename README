@@ -1,0 +1,14 @@
+1. Requirement
+
+- Julia 1.5.3
+- Julia packages : CUDA, LinearAlgebra, SpecialFunctions
+- NOTE : GPU architechure is at least Pascal or later. (Volta, Turing)
+
+2. How to run
+
+- In main.jl, the parameters (field term hr and hi, temperature br and bi, ...) is used to 
+calculate the log of partition function per site with function partition(pars). 
+
+- In loop_tnr.jl, maximum iteration and cut-off in the singular value spectrum, etc. can be modified.
+
+- Run 'julia main.jl' to run the code.
