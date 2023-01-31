@@ -1,8 +1,8 @@
 1. Requirement
 
-- Julia 1.5.3
-- Julia packages : CUDA, LinearAlgebra, SpecialFunctions
-- NOTE : GPU architechure is at least Pascal or later. (Volta, Turing, ...)
+- Julia 1.5.3 (Later version: it may not work because of changes in TensorOperations)
+- Julia packages : CUDA, LinearAlgebra, SpecialFunctions, TensorOperations
+- GPU architechure : at least Pascal or later. (Volta, Turing, ...)
 
 2. How to run
 
